@@ -1,29 +1,3 @@
-"""
-O3 BBH Gravitational Wave Preprocessing Pipeline
-==================================================
-Based on: "A Machine-Learning Pipeline for Real-Time Detection of
-Gravitational Waves from Compact Binary Coalescences" (arXiv:2403.18661)
-
-What changed from the original code you had
---------------------------------------------
-  BEFORE : get_synthetic_strain_data() -- completely FAKE gaussian noise,
-           nothing to do with LIGO or O3.
-  NOW    : fetch_o3_strain()           -- real O3 strain from GWOSC servers,
-           centered on a confirmed BBH event from GWTC-3.
-
-All preprocessing classes (SpectralDensity, Whiten, ChannelWiseScaler)
-are kept as-is because the math is correct -- only the data source changes.
-
-How to run
-----------
-  pip install gwpy gwosc numpy torch scipy matplotlib
-  python o3_bbh_preprocessing_v2.py
-
-  Optional flags:
-  --event      GW190521        (any GWTC-3 BBH name)
-  --duration   16              (seconds around event centre)
-  --plot                       (save a visualisation PNG)
-"""
 
 # ── Standard library ──────────────────────────────────────────────────────────
 import argparse
