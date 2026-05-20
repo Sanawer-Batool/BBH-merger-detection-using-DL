@@ -478,9 +478,6 @@ def plot_pipeline(
     Row 3 : After normalisation    -- centred at zero, ready for CNN
     Row 4 : PSD of both detectors  -- noise floor shape (log-log scale)
             with the signal band [highpass, lowpass] highlighted
-
-    This is the figure you show in your research meeting to demonstrate
-    that your preprocessing is working correctly.
     """
     fig, axes = plt.subplots(4, 1, figsize=(14, 14))
     fig.suptitle(f"Preprocessing Pipeline  ·  {event_name}", fontsize=14, fontweight="bold")
